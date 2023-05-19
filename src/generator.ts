@@ -40,7 +40,6 @@ export function generateMiddlewareFromRuleTree<TContext extends Record<string, u
       const tree = (ruleTree as Record<string, any>)[namespace];
       if (tree?.[type]?.[opName]) {
         rule = tree?.[type]?.[opName] || options.fallbackRule;
-        return;
       }
     }
 
